@@ -1,0 +1,120 @@
+// _header.scss
+
+#cabecalho {
+  background-color: $primary-color; // Azul escuro como cor de fundo do cabeçalho
+}
+
+.navbar-brand {
+  color: $text-color !important; // Branco para o texto da marca
+  font-size: 1.5rem;
+
+  &:hover {
+    color: $secondary-color !important; // Azul um pouco mais claro para o efeito hover
+  }
+}
+
+.navbar-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 0;
+
+  @media (min-width: 992px) {
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 0;
+  }
+}
+
+.navbar-nav .nav-item {
+  margin: 0.5rem 0;
+
+  @media (min-width: 992px) {
+    margin: 0 1rem;
+  }
+}
+
+.navbar-nav .nav-link {
+  color: $text-color !important; // Branco para os links
+  font-size: 1.1rem;
+
+  &:hover {
+    color: $accent-color !important; // Laranja para o efeito hover
+  }
+}
+
+.navbar-toggler {
+  border-color: $accent-color; // Laranja para o botão de alternância
+
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3E%3Cpath stroke='%23ffffff' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  }
+}
+
+.navbar-nav .dropdown-submenu {
+  position: relative;
+}
+
+.navbar-nav .dropdown-submenu > .dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  margin-top: 10px;
+  padding: 0px;
+  background-color: $background-color; // Cor de fundo do submenu
+
+  @media (max-width: 991px) {
+    position: static;
+    float: none;
+    margin-left: 20px;
+    border: none;
+  }
+}
+
+.navbar-nav .dropdown-submenu:hover > .dropdown-menu {
+  display: block;
+}
+
+.navbar-nav .dropdown-item.dropdown-toggle::after {
+  content: "\f105";
+  float: right;
+  border: none;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+
+.navbar-nav .dropdown-menu .dropdown-item {
+  @media (max-width: 991px) {
+    background-color: $light-color; // Tom mais claro para o fundo dos itens do submenu
+    color: $text-color; // Branco para o texto
+
+    &:hover {
+      background-color: $secondary-color; // Azul claro para o efeito hover
+      color: $text-color !important; // Branco para o texto ao passar o mouse
+    }
+  }
+}
+
+/* Adiciona o clique para abrir os submenus em telas menores */
+@media (max-width: 991px) {
+  .navbar-nav .dropdown-submenu > .dropdown-menu {
+    display: none; /* Esconde o submenu por padrão */
+  }
+
+  .navbar-nav .dropdown-submenu > .dropdown-item:focus + .dropdown-menu,
+  .navbar-nav
+    .dropdown-submenu
+    > .dropdown-item.dropdown-toggle:focus
+    + .dropdown-menu {
+    display: block; /* Mostra o submenu ao clicar */
+  }
+
+  .navbar-nav .dropdown-submenu > .dropdown-menu.show {
+    display: block;
+  }
+
+  .navbar-nav .dropdown-submenu .dropdown-item:hover {
+    color: $text-color !important; /* Branco para o texto ao passar o mouse */
+  }
+}

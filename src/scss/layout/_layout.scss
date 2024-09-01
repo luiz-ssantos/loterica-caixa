@@ -1,0 +1,74 @@
+// Reset CSS básico
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: $font-family-base; // Utiliza a fonte base
+  color: $text-color; // Cor padrão do texto
+  background-color: $background-color; // Cor de fundo padrão
+}
+
+main {
+  flex: 1; /* Permite que o conteúdo principal expanda e ocupe o espaço disponível */
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col {
+  flex: 1;
+  padding: $padding-base;
+}
+
+.card {
+  background-color: $background-color; // Cor de fundo do cartão
+  padding: 2rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  .card-title {
+    color: $primary-color; // Azul escuro
+    font-size: $heading-font-size; // Tamanho da fonte para o título
+    margin-bottom: 1rem;
+  }
+
+  .card-text {
+    color: $secondary-color; // Verde calmo
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  hr {
+    border-top: 2px solid $highlight-light-color; // Dourado claro
+    margin: 2rem 0;
+  }
+
+  .btn-primary {
+    background-color: $accent-color; // Dourado quente
+    border: none;
+    &:hover {
+      background-color: darken(
+        $accent-color,
+        10%
+      ); // Tom mais escuro do dourado
+    }
+  }
+
+  .rocket-icon img {
+    width: 80px; /* Ajuste o tamanho conforme necessário */
+  }
+}

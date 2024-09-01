@@ -1,0 +1,16 @@
+// Importando os arquivos SCSS
+@import "variables/variables"; // Define variáveis de cores, fontes e espaçamentos
+@import "mixins/mixins"; // Contém mixins reutilizáveis
+@import "layout/layout"; // Estilos básicos de layout e containers
+@import "components/header"; // Estilos específicos para o cabeçalho
+@import "components/footer"; // Estilos específicos para o rodapé
+@import "components/fechar-caixa"; // Estilos específicos para a página de fechamento de caixa
+
+// Estilos globais
+body {
+  background-color: $background-color;
+  color: $primary-color;
+  font-family: $font-family-base;
+}
+
+// Estilos adicionais ou personalizados podem ser adicionados aqui

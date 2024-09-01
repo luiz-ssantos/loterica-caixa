@@ -1,0 +1,12 @@
+// Mixin para centralizar um elemento
+@mixin center-element {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Mixin para adicionar um box-shadow
+@mixin box-shadow($color: rgba(0, 0, 0, 0.1)) {
+  -webkit-box-shadow: 0 2px 4px $color;
+  box-shadow: 0 2px 4px $color;
+}

@@ -1,0 +1,24 @@
+/* Rodapé */
+.footer {
+  background-color: $primary-color; // Azul escuro como cor de fundo do rodapé
+  color: $text-color; // Texto em branco
+  padding: $padding-base; // Utiliza a variável de espaçamento base
+  text-align: center;
+
+  .social-icons {
+    margin-top: $margin-base; // Utiliza a variável de espaçamento base para o topo
+    display: flex;
+    justify-content: center;
+
+    a {
+      color: $text-color !important; // Branco para os ícones
+      margin: 0 0.5rem;
+      font-size: 1.2rem; // Tamanho de fonte ajustado para ícones
+      transition: color 0.3s ease; // Transição suave para o hover
+
+      &:hover {
+        color: $accent-color !important; // Laranja para o efeito hover nos ícones
+      }
+    }
+  }
+}

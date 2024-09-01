@@ -1,0 +1,78 @@
+#fechar-caixa {
+  .table {
+    thead {
+      background-color: $primary-color; // Azul escuro
+      color: $text-color; // Branco
+    }
+
+    td {
+      padding: $padding-base; // Espaçamento base
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: calc(#{$padding-base} / 2); // Metade do espaçamento base
+    }
+  }
+
+  .btn-primary {
+    background-color: $accent-color; // Laranja
+    border: none;
+
+    &:hover {
+      background-color: darken(
+        $accent-color,
+        10%
+      ); // Tom mais escuro do laranja
+    }
+  }
+
+  .form-control {
+    max-width: 200px;
+    margin: $margin-base auto; // Espaçamento base para o margin
+  }
+
+  .card-title {
+    color: $primary-color; // Azul escuro
+  }
+
+  .btn-red {
+    background-color: #dc3545; // Vermelho
+    color: $text-color; // Branco
+
+    &:hover {
+      opacity: 0.8; // Transparência no hover
+    }
+  }
+
+  .btn-green {
+    background-color: #28a745; // Verde
+    color: $text-color; // Branco
+
+    &:hover {
+      opacity: 0.8; // Transparência no hover
+    }
+  }
+}
+
+// Aplicações gerais de tabela
+.table {
+  thead th {
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  th,
+  td {
+    vertical-align: middle;
+  }
+
+  .btn-print {
+    background-color: #4caf50; // Verde
+    color: #fff;
+  }
+
+  .btn-print:hover {
+    background-color: #45a049; // Verde escuro
+  }
+}

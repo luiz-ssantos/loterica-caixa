@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sistema de Fechamento de Caixa</title>
+
+    <!-- Font Awesome CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.1/css/bootstrap.min.css"
+    />
+
+    <!-- Arquivo CSS compilado -->
+    <link rel="stylesheet" href="dist/css/main.min.css" />
+  </head>
+  <body>
+    <!-- Cabeçalho -->
+    <header
+      id="cabecalho"
+      class="navbar navbar-expand-lg sticky-top navbar-custom"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="./index.html">Lotérica Caixa</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#menu-navegacao"
+          aria-controls="menu-navegacao"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menu-navegacao">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#login"
+                ><i class="bi bi-house-door me-1"></i>Login</a
+              >
+            </li>
+            <!-- Dropdown de Sistema -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#sistema"
+                id="sistemaDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                >Sistema</a
+              >
+              <ul class="dropdown-menu" aria-labelledby="sistemaDropdown">
+                <li>
+                  <a class="dropdown-item" href="#fechar-caixa">Fechar Caixa</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a class="dropdown-item dropdown-toggle" href="#"
+                    >Relatórios</a
+                  >
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a class="dropdown-item" href="#relatorios-caixas"
+                        >Caixas</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#relatorios-vendas"
+                        >Vendas</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#fale-conosco"
+                ><i class="bi bi-chat-left-text me-1"></i>Fale Conosco</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main class="container mt-4 d-flex flex-column main-content">
+      <div class="content-box">
+        <section id="home" class="my-5">
+          <div class="container">
+            <div class="card shadow-sm border-0 rounded-4">
+              <div class="card-body text-center">
+                <div class="rocket-icon mb-4">
+                  <img src="dist/imgs/002.png" alt="Rocket" class="img-fluid" />
+                </div>
+                <h2 class="card-title">
+                  Bem-vindo ao Sistema de Fechamento de Caixa
+                </h2>
+                <p class="card-text">
+                  Este sistema ajuda a gerenciar o fechamento de caixa de sua
+                  lotérica de forma eficiente e precisa.
+                </p>
+                <hr />
+                <h2 class="card-title">Sobre o Sistema</h2>
+                <p class="card-text">
+                  Nosso sistema é projetado para simplificar as operações de
+                  caixa, fornecendo uma interface amigável e relatórios
+                  detalhados.
+                </p>
+                <hr />
+                <h2 class="card-title">Contato</h2>
+                <p class="card-text">
+                  Se você tiver dúvidas ou precisar de suporte, entre em contato
+                  conosco pelo email: suporte@loterica.com
+                </p>
+                <a href="#boost" class="btn btn-primary rounded-pill mt-3"
+                  >Impulsione Agora</a
+                >
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="footer text-center py-3">
+      <p>&copy; 2024 Lotérica Caixa. Todos os direitos reservados.</p>
+      <div class="social-icons">
+        <a href="#facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#twitter"><i class="fab fa-twitter"></i></a>
+        <a href="#instagram"><i class="fab fa-instagram"></i></a>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle (inclui Popper) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.1/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Script para Inputmask -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/inputmask/5.0.8/inputmask.min.js"></script>
+
+    <!-- Inicializa Inputmask e outros scripts -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        if (window.Inputmask) {
+          Inputmask().mask(document.querySelectorAll("input"));
+        } else {
+          console.error("Inputmask não está definido.");
+        }
+
+        // Outras funcionalidades podem ser inicializadas aqui
+      });
+    </script>
+
+    <!-- Arquivo JS compilado -->
+    <script src="./dist/js/main.min.js" type="module"></script>
+  </body>
+</html>
